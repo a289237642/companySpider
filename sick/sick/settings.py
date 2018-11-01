@@ -140,5 +140,5 @@ MYSQL_PORT = 3306
 # MONGODB_SHEETNAME = "doubanmovies"
 
 # 设置日志
-LOG_FILE = "jd_39.log"
-LOG_LEVEL = "DEBUG"
+# LOG_FILE = "jd_39.log"
+# LOG_LEVEL = "DEBUG"

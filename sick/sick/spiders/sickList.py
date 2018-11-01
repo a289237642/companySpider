@@ -24,8 +24,8 @@ class SicklistSpider(scrapy.Spider):
         # 问题类目
         catOne = response.xpath('//div[@class="sub"]/span[2]/a/text()').extract()[0]
         catTwo = response.xpath('//div[@class="sub"]/span[3]/a/text()').extract()[0]
-        catThree = response.xpath('//div[@class="sub"]/span[4]/a/text()[.!= ""]').extract()[0]
-        catFour = response.xpath('//span[@class="sub_here"]/text()').extract().strip()
+        catThree = response.xpath('//div[@class="sub"]/span[4]/a/text()').extract()
+        catFour = response.xpath('//span[@class="sub_here"]/text()').extract()[0].strip()
 
         # 问题标题
         title = response.xpath('//p[@class="ask_tit"]/text()').extract()[0].strip()
@@ -52,10 +52,10 @@ class SicklistSpider(scrapy.Spider):
         item['catOne'] = catOne
         item['catTwo'] = catTwo
 
-        if catThree == "":
-            item['catThree'] = ""
+        if response.xpath('//div[@class="sub"]/span[4]/a/text()[.!=""]'):
+            item['catThree'] =catThree[0]
         else:
-            item['catThree'] = catThree
+            item['catThree'] =""
         if catFour == "":
             item['catFour'] = ""
         else:

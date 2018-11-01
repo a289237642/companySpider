@@ -9,7 +9,7 @@
       <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact" />
       <secret-storage>master_key</secret-storage>
       <user-name>ai_dev_user</user-name>
-      <introspection-schemas>*:ai_gaoxueya,ai_jk39</introspection-schemas>
+      <introspection-schemas>*:*</introspection-schemas>
     </data-source>
   </component>
 </project>

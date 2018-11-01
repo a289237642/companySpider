@@ -43,7 +43,10 @@ class DoctorlistSpider(scrapy.Spider):
                 item['name'] = name[i]
                 item['level'] = level[i]
                 item['company'] = company[i]
-                item['good'] = good[i]
+                if good != "":
+                    item['good'] = good[i]
+                else:
+                    item['good'] = ""
                 item['detail'] = detail[i]
                 item['time'] = time[i]
                 item['link'] = response.url
