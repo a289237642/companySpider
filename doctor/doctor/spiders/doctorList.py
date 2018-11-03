@@ -1,88 +1,50 @@
-# -*- coding: utf-8 -*-
-import scrapy
-
 from doctor.items import DoctorItem
+from scrapy.linkextractors import LinkExtractor
+from scrapy.spiders import CrawlSpider, Rule
 
 
-class DoctorlistSpider(scrapy.Spider):
+class DoctorlistSpider(CrawlSpider):
     name = 'doctorList'
     allowed_domains = ['ask.39.net']
     page = 0
-    start_urls = ['http://ask.39.net/browse/jibing.html']
+    start_urls = ['http://ask.39.net']
 
-    # 处理字符串
-    def handlerStr(self, str1):
-        ss = str1.split("-")[1].split(".")[0]
-        return ss
+    rules = (
+        Rule(LinkExtractor(allow=r'browse'), follow=True),
+        Rule(LinkExtractor(allow=r'question/(\d+).html'), callback='parse_item', follow=True),
+    )
 
-    # 处理url
-    def handlerUrl(self, url):
-        ss = url.split("/")[-1].split('-')[0]
-        return ss
+    def parse_item(self, response):
+        print('response.url===========', response.url)
+        item = DoctorItem()
+        div = response.xpath('//div[@class="sele_all marg_top"] | //div[@class="sele_all"]')
+        for dd in div:
+            # 医生姓名
+            name = dd.xpath('./div[1]/div[2]/p[@class="doc_xinx"]/span[1]/text()').extract()
+            item['name'] = ''.join(name)
+            # 医生级别
+            level = dd.xpath('./div[1]/div[2]/p[@class="doc_xinx"]/span[2]/text()').extract()
+            item['level'] = ''.join(level)
+            # 工作单位
+            company = dd.xpath('./div[1]/div[2]/p[@class="doc_xinx"]/span[3]/text()').extract()
+            # 擅长的领域
+            good = dd.xpath('./div[1]/div[2]/p[@class="doc_sc"]/span/text()').extract()
+            if len(div.xpath(".//span[@class='doc_yshi']/text()")) > 1:
+                # 医院
+                item['company'] = ''.join(company)
+            else:
+                item['company'] = ''
+            if len(div.xpath(".//p[@class='doc_sc']/span/text()")) > 0:
+                # 擅长
+                item['good'] = ''.join(good)
+            else:
+                item['good'] = ''
+            # 回答答案
+            detail = dd.xpath('./p/text()').extract()
+            item['detail'] = ''.join(detail)
+            # 回答时间
+            time = dd.xpath('./div[@class="doc_t_strip"]/div[1]/p/text()').extract()
+            item['time'] = ''.join(time[0])
 
-    def parseDetail(self, response):
-        # 医生姓名
-        name = response.xpath('//span[@class="doc_name"]/text()').extract()
-        # print(name)
-        # 医生级别
-        level = response.xpath('//span[@class="doc_yshi"][1]/text()').extract()
-        # 工作单位
-        company = response.xpath('//span[@class="doc_yshi"][2]/text()').extract()
-        print(company)
-        # 擅长的领域
-        good = response.xpath('//p[@class="doc_sc"]/span/text()').extract()
-        print(good)
-        # 回答答案
-        detail = response.xpath('//p[@class="sele_txt"]/text()').extract()
-        # 回答时间
-        time = response.xpath('//p[@class="doc_time"]/text()').extract()
-
-        for i in range(len(name)):
-            item = DoctorItem()
-            if len(name) > 0:
-                item['name'] = name[i]
-                item['level'] = level[i]
-                item['company'] = company[i]
-                if good != "":
-                    item['good'] = good[i]
-                else:
-                    item['good'] = ""
-                item['detail'] = detail[i]
-                item['time'] = time[i]
-                item['link'] = response.url
-            # print(item)
+            item['link'] = response.url
             yield item
-
-    def parseTwo(self, response):
-        urlTwos = response.xpath("//p[@class='p1']/a/@href").extract()  # 详情链接
-        # end--- //spa
-        end = response.xpath("//span[@class='pgleft']/a/@href").extract()[-1]
-        totalNum = self.handlerStr(str(end))
-        urlThree = response.url
-        typeKey = self.handlerUrl(str(urlThree))
-        for urlTwo in urlTwos:
-            listUrl = "http://ask.39.net" + urlTwo
-            yield scrapy.Request(listUrl, callback=self.parseDetail)
-
-        # 分页
-        # while self.page <= int(totalNum):
-        while self.page <= 2:
-            self.page = self.page + 1
-            url = "http://ask.39.net/news/" + typeKey + "-" + str(self.page) + ".html"
-
-            yield scrapy.Request(url, callback=self.parseTwo)
-
-    def parseOne(self, response):
-        links = response.xpath('//div[@class="J_check_more check-more"]/a/@href').extract()[0]
-        url = "http://ask.39.net" + links
-        # 进入二级菜单的列表页
-        yield scrapy.Request(url, callback=self.parseTwo)
-
-    def parse(self, response):
-        linkuUrl = response.xpath('//li[@class="sublink"]/a/@href').extract()
-        listOne = []
-        for url in linkuUrl:
-            listOne.append("http://ask.39.net" + url)
-        # 从二级菜单进入
-        for oneUrl in listOne:
-            yield scrapy.Request(oneUrl, callback=self.parseOne)

@@ -21,11 +21,30 @@ class DoctorPipeline(object):
         cue = con.cursor()
 
         try:
-
+            # if item['comapny'] == ["无"]:
+            #     cue.execute(
+            #         "insert into doctor391(name,level,good,detail,time,link) values(%s,%s,%s,%s,%s,%s)",
+            #         [item['name'], item['level'], item['good'], item['detail'], item['time'],
+            #          item['link']]
+            #     )
+            # elif item['good'] == ["无"]:
+            #     cue.execute(
+            #         "insert into doctor391(name,level,company,detail,time,link) values(%s,%s,%s,%s,%s,%s)",
+            #         [item['name'], item['level'], item['company'], item['detail'], item['time'],
+            #          item['link']]
+            #     )
+            # elif item['good'] == ["无"] and item['company'] == ["无"]:
+            #     cue.execute(
+            #         "insert into doctor391(name,level,detail,time,link) values(%s,%s,%s,%s,%s)",
+            #         [item['name'], item['level'], item['detail'], item['time'],
+            #          item['link']]
+            #     )
+            # else:
             cue.execute(
-                "insert into doctor(name,level,company,good,detail,time,link) values(%s,%s,%s,%s,%s,%s,%s)",
-                [item['name'], item['level'], item['company'], item['good'], item['detail'], item['time'], item['link']]
-            )
+                "insert into doctor391(name,level,company,good,detail,time,link) values(%s,%s,%s,%s,%s,%s,%s)",
+                [item['name'], item['level'], item['company'], item['good'], item['detail'], item['time'],
+                 item['link']])
+
 
         except Exception as e:
             print('Insert error:', e)

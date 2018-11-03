@@ -26,7 +26,7 @@ class SickPipeline(object):
         try:
 
             cue.execute(
-                "insert into jk_question(catOne,catTwo,catThree,catFour,title,gender,age,startTime,question,questionTime,questionTag,questionUrl) values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)",
+                "insert into question391(catOne,catTwo,catThree,catFour,title,gender,age,startTime,question,questionTime,questionTag,questionUrl) values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)",
                 [item['catOne'], item['catTwo'], item['catThree'], item['catFour'], item['title'], item['gender'],
                  item['age'], item['startTime'], item['question'], item['questionTime'], item['questionTag'],
                  item['questionUrl']]

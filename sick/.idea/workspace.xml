@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dbe0f949-55d3-44ff-a988-76f8620855f2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../doctor/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../doctor/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../doctor/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../doctor/doctor/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/../doctor/doctor/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../doctor/doctor/spiders/doctorList.py" beforeDir="false" afterPath="$PROJECT_DIR$/../doctor/doctor/spiders/doctorList.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../foodImage/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../foodImage/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/cf660a7a-28b9-4dc3-8932-e51636bca26d.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/cf660a7a-28b9-4dc3-8932-e51636bca26d.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sick/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/sick/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sick/spiders/sickList.py" beforeDir="false" afterPath="$PROJECT_DIR$/sick/spiders/sickList.py" afterDir="false" />
-    </list>
+    <list default="true" id="dbe0f949-55d3-44ff-a988-76f8620855f2" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,7 +10,7 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/sick$1.coverage" NAME="1 Coverage Results" MODIFIED="1540946305119" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/sick$main.coverage" NAME="main Coverage Results" MODIFIED="1541052162490" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/sick$main.coverage" NAME="main Coverage Results" MODIFIED="1541222520649" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -131,45 +120,51 @@
       <usages-collector id="statistics.lifecycle.project">
         <counts>
           <entry key="project.closed" value="6" />
+          <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.24" value="1" />
           <entry key="project.open.time.26" value="2" />
           <entry key="project.open.time.5" value="2" />
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.63" value="1" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="9" />
+          <entry key="project.open.time.9" value="1" />
+          <entry key="project.opened" value="12" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="doctor" value="1" />
+          <entry key="doctor" value="2" />
+          <entry key="doctor391" value="2" />
           <entry key="jk_doctor" value="1" />
           <entry key="jk_doctor_39" value="1" />
           <entry key="jk_question" value="2" />
-          <entry key="py" value="14" />
+          <entry key="py" value="18" />
+          <entry key="question39" value="1" />
+          <entry key="question391" value="1" />
           <entry key="scrapy" value="1" />
           <entry key="sql" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Database Element" value="5" />
-          <entry key="Python" value="15" />
+          <entry key="Database Element" value="10" />
+          <entry key="Python" value="19" />
           <entry key="Scratch" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="614" />
-          <entry key="sql" value="356" />
+          <entry key="py" value="903" />
+          <entry key="sql" value="391" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="614" />
+          <entry key="Python" value="903" />
           <entry key="SQL" value="80" />
-          <entry key="Scratch" value="276" />
+          <entry key="Scratch" value="311" />
         </counts>
       </usages-collector>
     </session>
@@ -183,25 +178,28 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="py" value="21" />
-          <entry key="sql" value="68" />
+          <entry key="sql" value="112" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Python" value="21" />
-          <entry key="Scratch" value="68" />
+          <entry key="Scratch" value="112" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="cfg" value="1" />
           <entry key="doctor" value="1" />
+          <entry key="doctor39" value="1" />
+          <entry key="jk_doctor" value="2" />
+          <entry key="jk_doctor_39" value="1" />
           <entry key="z_gaoxueya" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Database Element" value="3" />
+          <entry key="Database Element" value="7" />
           <entry key="Ini" value="1" />
         </counts>
       </usages-collector>
@@ -212,42 +210,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sick/spiders/sickList.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="764">
-              <caret line="50" selection-start-line="50" selection-end-line="50" />
-              <folding>
-                <element signature="e#24#37#0" expanded="true" />
-                <marker date="1541052162414" expanded="true" signature="457:461" ph="..." />
-              </folding>
+            <state relative-caret-position="302">
+              <caret line="78" column="18" lean-forward="true" selection-start-line="78" selection-start-column="18" selection-end-line="78" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="das://cf660a7a-28b9-4dc3-8932-e51636bca26d/schema/ai_jk39/table/doctor">
+        <entry file="das://cf660a7a-28b9-4dc3-8932-e51636bca26d/schema/ai_jk39/table/doctor391">
           <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
             <state>
               <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sick/settings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="66" column="19" selection-start-line="66" selection-start-column="19" selection-end-line="66" selection-end-column="19" />
-              <folding>
-                <element signature="e#522#4506#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scrapy.cfg">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -255,23 +228,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sick/middlewares.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/cf660a7a-28b9-4dc3-8932-e51636bca26d/console.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="6" selection-start-line="6" selection-end-line="6" selection-end-column="95" />
+            <state relative-caret-position="288">
+              <caret line="24" column="21" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
+              <folding>
+                <element signature="e#169#195#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="das://cf660a7a-28b9-4dc3-8932-e51636bca26d/schema/ai_gaoxueya/table/z_gaoxueya">
+        <entry file="file://$PROJECT_DIR$/sick/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="561">
+              <caret line="137" lean-forward="true" selection-start-line="137" selection-end-line="137" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="das://cf660a7a-28b9-4dc3-8932-e51636bca26d/schema/ai_jk39/table/question391">
           <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
             <state>
               <filtering enabled="true" />
@@ -280,7 +256,25 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="das://cf660a7a-28b9-4dc3-8932-e51636bca26d/schema/ai_jk39/table/jk_question">
+        <entry file="file://$PROJECT_DIR$/sick/pipelines.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="131">
+              <caret line="28" column="40" selection-start-line="28" selection-start-column="40" selection-end-line="28" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/cf660a7a-28b9-4dc3-8932-e51636bca26d/console.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="163">
+              <caret line="20" selection-start-line="20" selection-end-line="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="das://cf660a7a-28b9-4dc3-8932-e51636bca26d/schema/ai_jk39/table/doctor39">
           <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
             <state>
               <filtering enabled="true" />
@@ -292,7 +286,7 @@
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="72">
-              <caret line="3" selection-start-line="3" selection-end-line="3" />
+              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
             </state>
           </provider>
         </entry>
@@ -313,14 +307,14 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/sick/main.py" />
-        <option value="$PROJECT_DIR$/sick/middlewares.py" />
         <option value="$PROJECT_DIR$/jd_39.log" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/9951c484-c7a0-46d5-9691-0f836df4b1d0/console_1.sql" />
         <option value="$PROJECT_DIR$/sick/items.py" />
         <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/1.py" />
-        <option value="$PROJECT_DIR$/sick/pipelines.py" />
+        <option value="$PROJECT_DIR$/sick/middlewares.py" />
         <option value="$PROJECT_DIR$/sick/settings.py" />
+        <option value="$PROJECT_DIR$/sick/pipelines.py" />
         <option value="$PROJECT_DIR$/sick/spiders/sickList.py" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/cf660a7a-28b9-4dc3-8932-e51636bca26d/console.sql" />
       </list>
@@ -333,10 +327,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="322" />
-    <option name="y" value="187" />
+    <option name="x" value="267" />
+    <option name="y" value="219" />
     <option name="width" value="1388" />
-    <option name="height" value="940" />
+    <option name="height" value="884" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -378,7 +372,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="database.console.LAST_STATE" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -467,14 +461,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="177" y="279" width="1388" height="912" extended-state="0" />
+    <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.16493313" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14782129" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32942432" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.90885144" weight="0.3137255" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32870865" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.90885144" weight="0.5261473" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -484,42 +479,16 @@
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.09114858" side_tool="true" weight="0.8017817" />
       <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="bottom" id="Database Changes" order="11" />
-      <window_info active="true" anchor="bottom" id="Database Console" order="12" visible="true" weight="0.45228758" />
+      <window_info active="true" anchor="bottom" id="Database Console" order="12" visible="true" weight="0.36926362" />
       <window_info anchor="bottom" id="Docker" order="13" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" visible="true" weight="0.18870728" />
+      <window_info anchor="right" id="Database" order="3" visible="true" weight="0.13899614" />
       <window_info anchor="right" id="SciView" order="4" weight="0.3287369" />
       <window_info anchor="right" id="R Graphics" order="5" weight="0.32984003" />
-      <window_info anchor="right" id="R Packages" order="6" />
+      <window_info anchor="right" id="R Packages" order="6" weight="0.32986626" />
     </layout>
-    <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16493313" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32942432" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.90885144" visible="true" weight="0.38300654" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.5660981" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.09114858" side_tool="true" weight="0.8017817" />
-      <window_info anchor="bottom" id="Python Console" order="10" />
-      <window_info anchor="bottom" id="Database Changes" order="11" />
-      <window_info anchor="bottom" id="Database Console" order="12" weight="0.4578442" />
-      <window_info anchor="bottom" id="Docker" order="13" show_stripe_button="false" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" visible="true" weight="0.18870728" />
-      <window_info anchor="right" id="SciView" order="4" weight="0.3287369" />
-      <window_info anchor="right" id="R Graphics" order="5" weight="0.32984003" />
-      <window_info anchor="right" id="R Packages" order="6" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -569,73 +538,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://cf660a7a-28b9-4dc3-8932-e51636bca26d/schema/ai_jk39/table/jk_doctor">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://cf660a7a-28b9-4dc3-8932-e51636bca26d/schema/ai_jk39/table/jk_doctor_39">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sick/pipelines.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sick/middlewares.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="das://cf660a7a-28b9-4dc3-8932-e51636bca26d/schema/ai_jk39/table/jk_doctor_39" />
     <entry file="file://$PROJECT_DIR$/scrapy.cfg">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sick/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="66" column="19" selection-start-line="66" selection-start-column="19" selection-end-line="66" selection-end-column="19" />
-          <folding>
-            <element signature="e#522#4506#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sick/spiders/sickList.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="764">
-          <caret line="50" selection-start-line="50" selection-end-line="50" />
-          <folding>
-            <element signature="e#24#37#0" expanded="true" />
-            <marker date="1541052162414" expanded="true" signature="457:461" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://cf660a7a-28b9-4dc3-8932-e51636bca26d/schema/ai_jk39/table/jk_question">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
@@ -646,7 +553,80 @@
         </state>
       </provider>
     </entry>
+    <entry file="das://cf660a7a-28b9-4dc3-8932-e51636bca26d/schema/ai_jk39/table/question39">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://cf660a7a-28b9-4dc3-8932-e51636bca26d/schema/ai_jk39/table/jk_doctor">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sick/middlewares.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="24" column="21" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
+          <folding>
+            <element signature="e#169#195#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sick/pipelines.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="28" column="40" selection-start-line="28" selection-start-column="40" selection-end-line="28" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
     <entry file="das://cf660a7a-28b9-4dc3-8932-e51636bca26d/schema/ai_jk39/table/doctor">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sick/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="137" lean-forward="true" selection-start-line="137" selection-end-line="137" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://cf660a7a-28b9-4dc3-8932-e51636bca26d/schema/ai_jk39/table/jk_question">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sick/spiders/sickList.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="302">
+          <caret line="78" column="18" lean-forward="true" selection-start-line="78" selection-start-column="18" selection-end-line="78" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://cf660a7a-28b9-4dc3-8932-e51636bca26d/schema/ai_jk39/table/doctor391">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://cf660a7a-28b9-4dc3-8932-e51636bca26d/schema/ai_jk39/table/doctor39">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
@@ -655,8 +635,15 @@
     </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/cf660a7a-28b9-4dc3-8932-e51636bca26d/console.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="6" selection-start-line="6" selection-end-line="6" selection-end-column="95" />
+        <state relative-caret-position="163">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://cf660a7a-28b9-4dc3-8932-e51636bca26d/schema/ai_jk39/table/question391">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>

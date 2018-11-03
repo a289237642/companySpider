@@ -2,17 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac6a0f56-f677-4fe0-a494-cb7649957556" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../doctor/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../sick/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../doctor/.idea/dataSources/c96f66c6-7df6-4ac8-b3ea-2eb48f3aabc5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../doctor/.idea/dataSources/c96f66c6-7df6-4ac8-b3ea-2eb48f3aabc5.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../doctor/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../doctor/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../doctor/doctor/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/../doctor/doctor/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../doctor/doctor/spiders/doctorList.py" beforeDir="false" afterPath="$PROJECT_DIR$/../doctor/doctor/spiders/doctorList.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sick/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../sick/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sick/.idea/dataSources/cf660a7a-28b9-4dc3-8932-e51636bca26d.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../sick/.idea/dataSources/cf660a7a-28b9-4dc3-8932-e51636bca26d.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../sick/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../sick/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sick/sick/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/../sick/sick/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sick/sick/spiders/sickList.py" beforeDir="false" afterPath="$PROJECT_DIR$/../sick/sick/spiders/sickList.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -55,7 +47,7 @@
     <session id="-1864516447">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.opened" value="2" />
@@ -156,7 +148,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="322" />
     <option name="y" value="187" />
     <option name="width" value="1388" />
@@ -259,7 +251,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="322" y="187" width="1388" height="940" extended-state="1" />
+    <frame x="322" y="187" width="1388" height="940" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17459138" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />

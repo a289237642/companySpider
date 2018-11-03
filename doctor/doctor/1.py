@@ -6,18 +6,17 @@
 # https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 
 from scrapy import signals
-
-import random, requests
+import random
+import requests
+#导入库
 from fake_useragent import UserAgent
-
-
-class UserAgentMiddleware(object):
+#配置代理
+class RandomUserAgentMiddleware(object):
     # 初始化
     def __init__(self, crawler):
-        super(UserAgentMiddleware, self).__init__()
+        super(RandomUserAgentMiddleware, self).__init__()
         self.ua = UserAgent()
-        self.proxy_ip = requests.get(
-            'https://h.wandouip.com/get/ip-list?app_key=804bf35ae9c293e002ba8a49f8521ea7&pack=93&num=5&xy=1&type=2&lb=\r\n&mr=2&').json()
+        self.proxy_ip = requests.get('https://h.wandouip.com/get/ip-list?app_key=804bf35ae9c293e002ba8a49f8521ea7&pack=93&num=5&xy=1&type=2&lb=\r\n&mr=2&').json()
 
     # 静态方法
     @classmethod
@@ -29,13 +28,13 @@ class UserAgentMiddleware(object):
         self.proxy_IP = str(self.pro_ip['ip']) + ":" + str(self.pro_ip['port'])
         user_agent = self.ua.random
         proxy = "http://" + self.proxy_IP
-        print("当前代理服务器地址:", proxy)
+        print("当前代理服务器地址:",proxy)
         request.headers.setdefault('User-Agent', user_agent)
-        # 设置代理
+        #设置代理
         request.meta['proxy'] = proxy
 
 
-class SickSpiderMiddleware(object):
+class MapspiderSpiderMiddleware(object):
     # Not all methods need to be defined. If a method is not defined,
     # scrapy acts as if the spider middleware does not modify the
     # passed objects.
@@ -82,8 +81,7 @@ class SickSpiderMiddleware(object):
     def spider_opened(self, spider):
         spider.logger.info('Spider opened: %s' % spider.name)
 
-
-class SickDownloaderMiddleware(object):
+class MapspiderDownloaderMiddleware(object):
     # Not all methods need to be defined. If a method is not defined,
     # scrapy acts as if the downloader middleware does not modify the
     # passed objects.
