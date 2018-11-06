@@ -14,6 +14,15 @@ BOT_NAME = 'sick'
 SPIDER_MODULES = ['sick.spiders']
 NEWSPIDER_MODULE = 'sick.spiders'
 
+# # 使用scrapy-redis里的去重组件，不使用scrapy默认的去重方式
+# DUPEFILTER_CLASS = "scrapy_redis.dupefilter.RFPDupeFilter"
+# # 使用scrapy-redis里的调度器组件，不使用默认的调度器
+# SCHEDULER = "scrapy_redis.scheduler.Scheduler"
+# # 允许暂停，redis请求记录不丢失
+# SCHEDULER_PERSIST = True
+# # 默认的scrapy-redis请求队列形式（按优先级）
+# SCHEDULER_QUEUE_CLASS = "scrapy_redis.queue.SpiderPriorityQueue"
+
 USER_AGENT_LIST = [
     "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/22.0.1207.1 Safari/537.1",
     "Mozilla/5.0 (X11; CrOS i686 2268.111.0) AppleWebKit/536.11 (KHTML, like Gecko) Chrome/20.0.1132.57 Safari/536.11",
@@ -64,10 +73,10 @@ CONCURRENT_REQUESTS = 32
 # Configure a delay for requests for the same website (default: 0)
 # See https://doc.scrapy.org/en/latest/topics/settings.html#download-delay
 # See also autothrottle settings and docs
-# DOWNLOAD_DELAY = 5
+# DOWNLOAD_DELAY = 2
 # The download delay setting will honor only one of:
 # CONCURRENT_REQUESTS_PER_DOMAIN = 16
-# CONCURRENT_REQUESTS_PER_IP = 16
+# CONCURRENT_REQUESTS_PER_IP = 1
 
 # Disable cookies (enabled by default)
 # COOKIES_ENABLED = False
@@ -76,10 +85,12 @@ CONCURRENT_REQUESTS = 32
 # TELNETCONSOLE_ENABLED = False
 
 # Override the default request headers:
-# DEFAULT_REQUEST_HEADERS = {
-#   'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-#   'Accept-Language': 'en',
-# }
+DEFAULT_REQUEST_HEADERS = {
+    # 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+    # 'Accept-Language': 'en',
+    "Accept-Encoding": "Gzip",
+    "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36",
+}
 
 # Enable or disable spider middlewares
 # See https://doc.scrapy.org/en/latest/topics/spider-middleware.html
@@ -89,10 +100,10 @@ CONCURRENT_REQUESTS = 32
 
 # Enable or disable downloader middlewares
 # See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
-# DOWNLOADER_MIDDLEWARES = {
-#     # 'sick.middlewares.SickDownloaderMiddleware': 543,
-#     'sick.middlewares.UserAgentMiddleware': 543,
-# }
+DOWNLOADER_MIDDLEWARES = {
+    # 'sick.middlewares.SickDownloaderMiddleware': 543,
+    'sick.middlewares.UserAgentMiddleware': 543,
+}
 
 # Enable or disable extensions
 # See https://doc.scrapy.org/en/latest/topics/extensions.html
@@ -103,7 +114,10 @@ CONCURRENT_REQUESTS = 32
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-    'sick.pipelines.SickPipeline': 300,
+    'sick.pipelines.ExamplePipeline': 300,
+    'sick.pipelines.SickPipeline': 301,
+    # 把数据默认添加到redis数据库中
+    'scrapy_redis.pipelines.RedisPipeline': 400,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
@@ -142,3 +156,19 @@ MYSQL_PORT = 3306
 # 设置日志
 # LOG_FILE = "jd_39.log"
 # LOG_LEVEL = "DEBUG"
+
+# 配置redis
+# 使用scrapy-redis里的去重组件，不使用scrapy默认的去重方式
+DUPEFILTER_CLASS = "scrapy_redis.dupefilter.RFPDupeFilter"
+# 使用scrapy-redis里的调度器组件，不使用默认的调度器
+SCHEDULER = "scrapy_redis.scheduler.Scheduler"
+# 允许暂停，redis请求记录不丢失
+SCHEDULER_PERSIST = True
+# 默认的scrapy-redis请求队列形式（按优先级）
+SCHEDULER_QUEUE_CLASS = "scrapy_redis.queue.SpiderPriorityQueue"
+REDIS_HOST = '182.92.102.249'  # 也可以根据情况改成 localhost 
+REDIS_PORT = 8379
+REDIS_PARAMS = {'password': 'mnvhsgw$#88141', 'db': 2}
+
+# 182.92.102.249:8379 （外网）
+# mnvhsgw$#88141

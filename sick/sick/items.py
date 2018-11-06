@@ -5,46 +5,44 @@
 # See documentation in:
 # https://doc.scrapy.org/en/latest/topics/items.html
 
-import scrapy
+from scrapy.item import Item, Field
+from scrapy.loader import ItemLoader
+from scrapy.loader.processors import MapCompose, TakeFirst, Join
 
 
-class SickItem(scrapy.Item):
+class SickItem(Item):
     # 问题类目一
-    catOne = scrapy.Field()
+    catOne = Field()
     # 问题类目二
-    catTwo = scrapy.Field()
+    catTwo = Field()
     # 问题类目三
-    catThree = scrapy.Field()
+    catThree = Field()
     # 问题类目四
-    catFour = scrapy.Field()
+    catFour = Field()
 
     # 问题标题
-    title = scrapy.Field()
+    title = Field()
     # 患者性别
-    gender = scrapy.Field()
+    gender = Field()
     # 年龄
-    age = scrapy.Field()
+    age = Field()
     # 发病时间
-    startTime = scrapy.Field()
+    startTime = Field()
     # 问题描述
-    question = scrapy.Field()
+    question = Field()
     # 提问时间
-    questionTime = scrapy.Field()
+    questionTime = Field()
     # 问题标签
-    questionTag = scrapy.Field()
+    questionTag = Field()
     # 问题链接
-    questionUrl = scrapy.Field()
+    questionUrl = Field()
 
-    # doctor
-    # 医生姓名
-    # name = scrapy.Field()
-    # # 医生级别
-    # level = scrapy.Field()
-    # # 工作单位
-    # company = scrapy.Field()
-    # # 擅长的领域
-    # good = scrapy.Field()
-    # # 回答答案
-    # detail = scrapy.Field()
-    # # 回答时间
-    # time = scrapy.Field()
+    crawled = Field()
+    spider = Field()
+
+
+class SickLoader(ItemLoader):
+    default_item_class = SickItem
+    default_input_processor = MapCompose(lambda s: s.strip())
+    default_output_processor = TakeFirst()
+    description_out = Join()

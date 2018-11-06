@@ -8,6 +8,16 @@
 import pymysql
 
 from scrapy.conf import settings
+from datetime import datetime
+
+
+class ExamplePipeline(object):
+    def process_item(self, item, spider):
+        # 当前爬取的时间
+        item["crawled"] = datetime.utcnow()
+        # 爬虫的名称
+        item["spider"] = spider.name + "001"
+        return item
 
 
 class SickPipeline(object):
@@ -26,7 +36,7 @@ class SickPipeline(object):
         try:
 
             cue.execute(
-                "insert into question391(catOne,catTwo,catThree,catFour,title,gender,age,startTime,question,questionTime,questionTag,questionUrl) values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)",
+                "insert into question39(catOne,catTwo,catThree,catFour,title,gender,age,startTime,question,questionTime,questionTag,questionUrl) values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)",
                 [item['catOne'], item['catTwo'], item['catThree'], item['catFour'], item['title'], item['gender'],
                  item['age'], item['startTime'], item['question'], item['questionTime'], item['questionTag'],
                  item['questionUrl']]

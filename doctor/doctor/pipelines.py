@@ -6,10 +6,24 @@
 # See: https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 import pymysql
 from scrapy.conf import settings
+from datetime import datetime
+
+
+class ExamplePipeline(object):
+    def process_item(self, item, spider):
+        # 当前爬取的时间
+        item["crawled"] = datetime.utcnow()
+        # 爬虫的名称
+        item["spider"] = spider.name + "_001"
+        return item
 
 
 class DoctorPipeline(object):
     def process_item(self, item, spider):
+
+        item["crawled"] = datetime.utcnow()
+        item["spider"] = spider.name
+
         host = settings['MYSQL_HOST']
         user = settings['MYSQL_USER']
         psd = settings['MYSQL_PASSWORD']
@@ -21,31 +35,10 @@ class DoctorPipeline(object):
         cue = con.cursor()
 
         try:
-            # if item['comapny'] == ["无"]:
-            #     cue.execute(
-            #         "insert into doctor391(name,level,good,detail,time,link) values(%s,%s,%s,%s,%s,%s)",
-            #         [item['name'], item['level'], item['good'], item['detail'], item['time'],
-            #          item['link']]
-            #     )
-            # elif item['good'] == ["无"]:
-            #     cue.execute(
-            #         "insert into doctor391(name,level,company,detail,time,link) values(%s,%s,%s,%s,%s,%s)",
-            #         [item['name'], item['level'], item['company'], item['detail'], item['time'],
-            #          item['link']]
-            #     )
-            # elif item['good'] == ["无"] and item['company'] == ["无"]:
-            #     cue.execute(
-            #         "insert into doctor391(name,level,detail,time,link) values(%s,%s,%s,%s,%s)",
-            #         [item['name'], item['level'], item['detail'], item['time'],
-            #          item['link']]
-            #     )
-            # else:
             cue.execute(
-                "insert into doctor391(name,level,company,good,detail,time,link) values(%s,%s,%s,%s,%s,%s,%s)",
+                "insert into doctor39(name,level,company,good,detail,time,link,helpNum) values(%s,%s,%s,%s,%s,%s,%s,%s)",
                 [item['name'], item['level'], item['company'], item['good'], item['detail'], item['time'],
-                 item['link']])
-
-
+                 item['link'],item['helpNum']])
         except Exception as e:
             print('Insert error:', e)
             con.rollback()

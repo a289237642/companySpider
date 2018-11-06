@@ -1,30 +1,49 @@
 from scrapy import signals
 import random, requests
-from fake_useragent import UserAgent
 
 
 class UserAgentMiddleware(object):
     # 初始化
     def __init__(self, crawler):
         super(UserAgentMiddleware, self).__init__()
-        self.ua = UserAgent()
-        self.proxy_ip = requests.get(
-            'https://h.wandouip.com/get/ip-list?app_key=804bf35ae9c293e002ba8a49f8521ea7&pack=93&num=5&xy=1&type=2&lb=\r\n&mr=2&').json()
 
-    # 静态方法
+        self.proxy_ip = requests.get(
+            'http://dps.kdlapi.com/api/getdps/?orderid=944138024865099&num=10&pt=1&sep=1').text.split("\n")
+
     @classmethod
     def from_crawler(cls, crawler):
         return cls(crawler)
 
     def process_request(self, request, spider):
-        self.pro_ip = random.choice(self.proxy_ip["data"])
-        self.proxy_IP = str(self.pro_ip['ip']) + ":" + str(self.pro_ip['port'])
-        user_agent = self.ua.random
-        proxy = "http://" + self.proxy_IP
+        self.pro_ip = random.choice(self.proxy_ip)
+        proxy = "http://%(user)s:%(pwd)s@%(ip)s/" % {'user': 'sgi_wangg', 'pwd': 'p2xee24i', 'ip': self.pro_ip}
         print("当前代理服务器地址:", proxy)
-        request.headers.setdefault('User-Agent', user_agent)
         # 设置代理
         request.meta['proxy'] = proxy
+
+
+# class UserAgentMiddleware(object):
+#     # 初始化
+#     def __init__(self, crawler):
+#         super(UserAgentMiddleware, self).__init__()
+#         self.ua = UserAgent()
+#         self.proxy_ip = requests.get(
+#             'https://h.wandouip.com/get/ip-list?app_key=804bf35ae9c293e002ba8a49f8521ea7&pack=93&num=5&xy=1&type=2&lb=\r\n&mr=2&').json()
+#
+#     # 静态方法
+#     @classmethod
+#     def from_crawler(cls, crawler):
+#         return cls(crawler)
+#
+#     def process_request(self, request, spider):
+#         self.pro_ip = random.choice(self.proxy_ip["data"])
+#         self.proxy_IP = str(self.pro_ip['ip']) + ":" + str(self.pro_ip['port'])
+#         user_agent = self.ua.random
+#         proxy = "http://" + self.proxy_IP
+#         print("当前代理服务器地址:", proxy)
+#         request.headers.setdefault('User-Agent', user_agent)
+#         # 设置代理
+#         request.meta['proxy'] = proxy
 
 
 class DoctorSpiderMiddleware(object):

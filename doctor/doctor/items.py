@@ -5,21 +5,35 @@
 # See documentation in:
 # https://doc.scrapy.org/en/latest/topics/items.html
 
-import scrapy
+from scrapy.item import Item, Field
+from scrapy.loader import ItemLoader
+from scrapy.loader.processors import MapCompose, TakeFirst, Join
 
 
-class DoctorItem(scrapy.Item):
+class DoctorItem(Item):
     # 医生姓名
-    name = scrapy.Field()
+    name = Field()
     # 医生级别
-    level = scrapy.Field()
+    level = Field()
     # 工作单位
-    company = scrapy.Field()
+    company = Field()
     # 擅长的领域
-    good = scrapy.Field()
+    good = Field()
     # 回答答案
-    detail = scrapy.Field()
+    detail = Field()
     # 回答时间
-    time = scrapy.Field()
+    time = Field()
     # 问题链接
-    link = scrapy.Field()
+    link = Field()
+    # 帮助人数
+    helpNum = Field()
+
+    crawled = Field()
+    spider = Field()
+
+
+class DoctorLoader(ItemLoader):
+    default_item_class = DoctorItem
+    default_input_processor = MapCompose(lambda s: s.strip())
+    default_output_processor = TakeFirst()
+    description_out = Join()
