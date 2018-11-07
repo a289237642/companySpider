@@ -7,6 +7,7 @@ class UserAgentMiddleware(object):
     def __init__(self, crawler):
         super(UserAgentMiddleware, self).__init__()
 
+        # 这个高匿代理返回的个数是可以改个数的（http://dps.kdlapi.com/api/getdps/?orderid=944138024865099&num=10&pt=1&sep=1）
         self.proxy_ip = requests.get(
             'http://dps.kdlapi.com/api/getdps/?orderid=944138024865099&num=10&pt=1&sep=1').text.split("\n")
 
