@@ -8,6 +8,29 @@
 from scrapy import signals
 
 
+import random, requests
+
+
+class UserAgentMiddleware(object):
+    # 初始化
+    def __init__(self, crawler):
+        super(UserAgentMiddleware, self).__init__()
+
+        self.proxy_ip = requests.get(
+            'http://dps.kdlapi.com/api/getdps/?orderid=924667075915495&num=10&pt=1&sep=1').text.split("\n")
+
+    @classmethod
+    def from_crawler(cls, crawler):
+        return cls(crawler)
+
+    def process_request(self, request, spider):
+        self.pro_ip = random.choice(self.proxy_ip)
+        proxy = "http://%(user)s:%(pwd)s@%(ip)s/" % {'user': '1161824577@qq.com', 'pwd': '!A123456a1988', 'ip': self.pro_ip}
+        print("当前代理服务器地址:", proxy)
+        # 设置代理
+        request.meta['proxy'] = proxy
+
+
 class GaoxueyaSpiderMiddleware(object):
     # Not all methods need to be defined. If a method is not defined,
     # scrapy acts as if the spider middleware does not modify the
