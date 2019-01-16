@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>招标公告查询系统</title>
+
+    <link rel="stylesheet" type="text/css" href="static/lib/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="static/lib/bootstrap-table/bootstrap-table.css">
+
+    <link rel="stylesheet" type="text/css" href="static/css/index.css">
+</head>
+<body>
+
+<!-- Fixed navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">招标公告查询系统</a>
+        </div>
+
+        <div id="navbar" class="navbar-collapse collapse">
+          <form class="navbar-form navbar-right">
+            <div class="form-group">
+              <input type="text" placeholder="关键词" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-primary">查询</button>
+          </form>
+        </div><!--/.navbar-collapse -->
+      </div>
+    </nav>
+
+    <div id="content" class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <table id="table" class="table table-bordered table-striped">
+                    <!--
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>标题</th>
+                            <th>网站名称</th>
+                            <th>发布时间</th>
+                            <th>地点</th>
+                            <th class="col-md-1">内容</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-content">
+
+                    </tbody>
+                    -->
+
+                </table>
+            </div>
+
+            <div class="col-md-12">
+                <nav aria-label="..." class="text-center">
+                  <!--
+                  <input type="hidden" name="keyword" value="0">
+                  <input type="hidden" name="page" value="1">
+                  <input type="hidden" name="start" value="">
+                  <input type="hidden" name="end" value="">
+                  <input type="hidden" name="region" value="0">
+                  <input type="hidden" name="site" value="0">
+
+                  <!--
+                  <ul class="pagination" id="pagination">
+                    <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+                    <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
+                  </ul>
+                  -->
+                </nav>
+            </div>
+
+
+        </div>
+    </div> <!-- /container -->
+
+
+
+<script type="text/javascript" src="static/lib/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="static/lib/bootstrap/js/bootstrap.js"></script>
+<script type="text/javascript" src="static/lib/bootstrap-table/bootstrap-table.js"></script>
+
+<!--
+<script type="text/javascript" src="static/lib/vue.js"></script>
+<script type="text/javascript" src="static/lib/axios.min.js"></script>
+-->
+<script type="text/javascript" src="static/lib/template-web.js"></script>
+<script type="text/javascript" src="static/js/index.js"></script>
+
+{% raw %}
+<script type="text/html" id="table-content-art">
+    {{each content value index}}
+    <tr>
+        <td>{{ value.id }}</td>
+        <td><span title="{{ value.title }}">{{ value.title }}</span></td>
+        <td><a href="{{ value.url }}" title="{{ value.url }}" target="_blank">{{ value.name }}</a></td>
+        <td>{{ value.pubdate }}</td>
+        <td>{{ value.region | regionMap }}</td>
+        <td><button type="button" class="btn btn-primary btn-xs">查看</button></td>
+    </tr>
+    {{/each}}
+
+</script>
+{% endraw %}
+
+</body>
+</html>

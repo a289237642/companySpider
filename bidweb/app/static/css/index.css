@@ -1,0 +1,35 @@
+body {
+  /*min-height: 2000px;*/
+  /*padding-top: 70px;*/
+}
+
+#content {
+    padding-top: 90px;
+}
+
+/*th {*/
+    /*text-align: center;*/
+/*}*/
+
+.medium.pagination a {
+  height: 35px;
+  width: 35px;
+  font-size: 30px;
+  line-height: 30px;
+}
+
+
+.medium.pagination input {
+  width: 170px;
+   height: 35px;
+  font-size: 20px;
+}
+
+
+/*
+.medium.pagination input {
+  width: 200px;
+  height: 40px;
+  font-size: 20px;
+}
+*/
