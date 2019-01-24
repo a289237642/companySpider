@@ -1,0 +1,58 @@
+{
+  "accountType": "1",
+  "arrCity": "DAD",
+  "baggagePrice": 0,
+  "baggages": [],
+  "carrier": "UO",
+  "cur": "HKD",
+  "depCity": "HKG",
+  "email": "3001535110@qq.com",
+  "flightNumber": "UO552",
+  "fromDate": "2019-02-07",
+  "fromSegments": [
+    {
+      "arr": "DAD",
+      "arrDate": "201902070955",
+      "carrier": "UO",
+      "dep": "HKG",
+      "depDate": "201902070855",
+      "flightNumber": "UO552",
+      "segmentindex": 1
+    }
+  ],
+  "id": 1433514,
+  "loginAccount": "B2BPEKTSY0001",
+  "loginPassword": "PEK@tsy9753",
+  "msg": "",
+  "name": "MO/ZIQIAN",
+  "orderCode": "CTR_0767ec52a0ac49a4b9fa5b3bb2b39053",
+  "orderNo": "386485505",
+  "passengers": [
+    {
+      "birth": "19680216",
+      "gender": "F",
+      "name": "JIANG/QIONG"
+    },
+    {
+      "birth": "19950702",
+      "gender": "F",
+      "name": "MO/ZIQIAN"
+    }
+  ],
+  "path": null,
+  "pnr": "TET5PE",
+  "pnrStatus": "confirm",
+  "price": 2634,
+  "retDate": null,
+  "retSegments": [],
+  "source": 2,
+  "status": 1,
+  "taskId": 49589,
+  "taskStatus": "Y",
+  "tripType": 1
+}
+
+
+
+
+
