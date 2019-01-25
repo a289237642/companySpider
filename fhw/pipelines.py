@@ -37,16 +37,17 @@ class FhwPipeline(object):
             if response.status_code == 200:
                 with open(image_path, "wb")as f:
                     f.write(response.content)
-        self.connect.ping(reconnect=True)
-        self.cursor.execute(
-            "insert into lg2(BTIT,CYRS,PLS,XWLY,LMLJ,BZ,CGSJ,CJSJ,ZWWB,ZWNR,TJS,YS_URL,CL_URL,TP_URL,RKSJ,URL) "
-            "values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)",
-            [item.get('BTIT'), item.get('CYRS'), item.get('PLS'), item.get('XWLY'), item.get('LMLJ'), item.get('BZ'),
-             item.get('CGSJ'),
-             item.get('CJSJ'), item.get('ZWWB'), item.get('ZWNR'), item.get('TJS'), item.get('YS_URL'), item['CL_URL'],
-             image_path,
-             datetime.now(), item['URL']])
-        self.connect.commit()
+
+        try:
+            self.cursor.execute(
+                "insert into demo(BTIT,CYRS,PLS,XWLY,LMLJ,BZ,CGSJ,CJSJ,ZWWB,ZWNR,TJS,YS_URL,CL_URL,TP_URL,RKSJ,URL) "
+                "values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)",
+                [item['BTIT'], item['CYRS'], item['PLS'], item['XWLY'], item['LMLJ'], item['BZ'], item['CGSJ'],
+                 item['CJSJ'], item['ZWWB'], item['ZWNR'], item['TJS'], item['YS_URL'], item['CL_URL'], image_path,
+                 datetime.now(), item['URL']])
+            self.connect.commit()
+        except Exception as error:
+            print(error)
         return item
 
     def close_spider(self, spider):

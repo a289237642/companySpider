@@ -47,3 +47,8 @@ class FhwItem(scrapy.Item):
     CL_URL = scrapy.Field()
     # 缩略图链接
     TP_URL = scrapy.Field()
+
+    # 专题
+    LMLJ2 = scrapy.Field()
+
+    URL = scrapy.Field()

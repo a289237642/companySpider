@@ -162,7 +162,7 @@ class NewsSpider(CrawlSpider):
         # 采集时间
         item['CJSJ'] = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
         # 正文文本
-        item['ZWWB'] = cont.replace("\n", "").replace("\r", "").replace("\xa09", "").replace("\xa010", "")
+        item['ZWWB'] = cont.replace("\n", "").replace("\r", "")
         # 正文内容
         item['ZWNR'] = ZWNR.replace("<html><body>", "").replace("</body></html>", "")
         # 推荐数

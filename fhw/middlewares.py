@@ -27,7 +27,7 @@ class UserAgentMiddleware(object):
                                                       'ip': self.pro_ip}
         print("当前代理服务器地址:", proxy)
         # 设置代理
-        requests.meta['proxy'] = proxy
+        request.meta['proxy'] = proxy
 
 
 class FhwSpiderMiddleware(object):
